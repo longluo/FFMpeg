@@ -1,4 +1,7 @@
-FFMpeg
-======
+# FFMpeg
 
 The Android FFMpeg project.
+
+just select your video which you want to convert, 
+set parametres if you want and press convert (long videos will take a long time)
+
