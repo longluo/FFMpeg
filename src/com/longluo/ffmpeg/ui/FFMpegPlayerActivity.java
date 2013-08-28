@@ -12,24 +12,29 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class FFMpegPlayerActivity extends Activity {
-	private static final String 	TAG = "FFMpegPlayerActivity";
-	//private static final String 	LICENSE = "This software uses libraries from the FFmpeg project under the LGPLv2.1";
-	
-	private FFMpegMovieViewAndroid 	mMovieView;
-	//private WakeLock				mWakeLock;
-	
+	private static final String TAG = "FFMpegPlayerActivity";
+	// private static final String LICENSE =
+	// "This software uses libraries from the FFmpeg project under the LGPLv2.1";
+
+	private FFMpegMovieViewAndroid mMovieView;
+
+	// private WakeLock mWakeLock;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		Intent i = getIntent();
-		String filePath = i.getStringExtra(getResources().getString(R.string.input_file));
-		if(filePath == null) {
+
+		Intent it = getIntent();
+		String filePath = it.getStringExtra(getResources().getString(
+				R.string.input_file));
+		if (filePath == null) {
 			Log.d(TAG, "Not specified video file");
 			finish();
 		} else {
-			//PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-		    //mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, TAG);
+			// PowerManager pm = (PowerManager)
+			// getSystemService(Context.POWER_SERVICE);
+			// mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK,
+			// TAG);
 
 			try {
 				FFMpeg ffmpeg = new FFMpeg();
@@ -55,4 +60,3 @@ public class FFMpegPlayerActivity extends Activity {
 		}
 	}
 }
-
