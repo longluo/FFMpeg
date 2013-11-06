@@ -1,4 +1,4 @@
-package com.longluo.ffmpeg.ui;
+package com.longluo.ffmpeg;
 
 import android.app.AlertDialog;
 import android.content.Context;
